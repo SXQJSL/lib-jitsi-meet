@@ -39,23 +39,24 @@ You can access the following methods and objects trough ```JitsiMeetJS``` object
 *  ```JitsiMeetJS.init(options)``` - this method initialized Jitsi Meet API.
 The ```options``` parameter is JS object with the following properties:
     1. useIPv6 - boolean property
-    2. desktopSharingChromeExtId - The ID of the jidesha extension for Chrome. Example: 'mbocklcggfhnbahlnepmldehdhpjfcjp'
-    3. desktopSharingChromeDisabled - Boolean. Whether desktop sharing should be disabled on Chrome. Example: false.
-    4. desktopSharingChromeSources - Array of strings with the media sources to use when using screen sharing with the Chrome extension. Example: ['screen', 'window']
-    5. desktopSharingChromeMinExtVersion - Required version of Chrome extension. Example: '0.1'
-    6. desktopSharingFirefoxExtId - The ID of the jidesha extension for Firefox. If null, we assume that no extension is required.
-    7. desktopSharingFirefoxDisabled - Boolean. Whether desktop sharing should be disabled on Firefox. Example: false.
-    8. desktopSharingFirefoxMaxVersionExtRequired - The maximum version of Firefox which requires a jidesha extension. Example: if set to 41, we will require the extension for Firefox versions up to and including 41. On Firefox 42 and higher, we will run without the extension. If set to -1, an extension will be required for all versions of Firefox.
-    9. desktopSharingFirefoxExtensionURL - The URL to the Firefox extension for desktop sharing. "null" if no extension is required.
-    10. disableAudioLevels - boolean property. Enables/disables audio levels.
-    11. disableSimulcast - boolean property. Enables/disables simulcast.
-    12. enableWindowOnErrorHandler - boolean property (default false). Enables/disables attaching global onerror handler (window.onerror).
-    13. disableThirdPartyRequests - if true - callstats will be disabled and the callstats API won't be included.
-    14. enableAnalyticsLogging - boolean property (default false). Enables/disables analytics logging.
-    15. callStatsCustomScriptUrl - (optional) custom url to access callstats client script
-    16. callStatsConfIDNamespace - (optional) a namespace to prepend the callstats conference ID with. Defaults to the window.location.hostname
-    17. disableRtx - (optional) boolean property (default to false).  Enables/disable the use of RTX.
-    18. preferH264 - (optional) boolean property (default to false).  Enables/disable preferring the first instance of an h264 codec in an offer by moving it to the front of the codec list.
+    2. disableDesktopSharing - Boolean. When set to true disables desktop sharing on all browsers. 
+    3. desktopSharingChromeExtId - The ID of the jidesha extension for Chrome. Example: 'mbocklcggfhnbahlnepmldehdhpjfcjp'
+    4. desktopSharingChromeDisabled - Boolean. Whether desktop sharing should be disabled on Chrome. Example: false.
+    5. desktopSharingChromeSources - Array of strings with the media sources to use when using screen sharing with the Chrome extension. Example: ['screen', 'window']
+    6. desktopSharingChromeMinExtVersion - Required version of Chrome extension. Example: '0.1'
+    7. desktopSharingFirefoxExtId - The ID of the jidesha extension for Firefox. If null, we assume that no extension is required.
+    8. desktopSharingFirefoxDisabled - Boolean. Whether desktop sharing should be disabled on Firefox. Example: false.
+    9. desktopSharingFirefoxMaxVersionExtRequired - The maximum version of Firefox which requires a jidesha extension. Example: if set to 41, we will require the extension for Firefox versions up to and including 41. On Firefox 42 and higher, we will run without the extension. If set to -1, an extension will be required for all versions of Firefox.
+    10. desktopSharingFirefoxExtensionURL - The URL to the Firefox extension for desktop sharing. "null" if no extension is required.
+    11. disableAudioLevels - boolean property. Enables/disables audio levels.
+    12. disableSimulcast - boolean property. Enables/disables simulcast.
+    13. enableWindowOnErrorHandler - boolean property (default false). Enables/disables attaching global onerror handler (window.onerror).
+    14. disableThirdPartyRequests - if true - callstats will be disabled and the callstats API won't be included.
+    15. enableAnalyticsLogging - boolean property (default false). Enables/disables analytics logging.
+    16. callStatsCustomScriptUrl - (optional) custom url to access callstats client script
+    17. callStatsConfIDNamespace - (optional) a namespace to prepend the callstats conference ID with. Defaults to the window.location.hostname
+    18. disableRtx - (optional) boolean property (default to false).  Enables/disable the use of RTX.
+    19. preferH264 - (optional) boolean property (default to false).  Enables/disable preferring the first instance of an h264 codec in an offer by moving it to the front of the codec list.
 
 * ```JitsiMeetJS.JitsiConnection``` - the ```JitsiConnection``` constructor. You can use that to create new server connection.
 
